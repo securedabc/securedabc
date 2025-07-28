@@ -17,9 +17,10 @@ const Footer = () => {
     ];
 
     const complianceSeals = [
-        { name: 'ISO 27001', image: '/iso-seal.png' },
-        { name: 'FedRAMP', image: '/fedramp-seal.png' },
-        { name: 'CMMC', image: '/cmmc-seal.png' },
+        { name: 'ISO 27001', image: '/certifications/iso.png' },
+        { name: 'FedRAMP', image: '/certifications/fedramp.png' },
+        { name: 'CMMC', image: '/certifications/cmmc.png' },
+        { name: 'A2LA', image: '/certifications/a2la.png' },
     ];
 
     return (
@@ -74,7 +75,11 @@ const Footer = () => {
                         <div className="flex space-x-4">
                             {complianceSeals.map((seal) => (
                                 <div key={seal.name} className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
-                                    <span className="text-xs text-center">{seal.name}</span>
+                                    <img
+                                    src={seal.image}
+                                    alt={seal.name}
+                                    className="max-h-9 w-auto"
+                                />
                                 </div>
                             ))}
                         </div>
