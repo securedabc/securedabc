@@ -81,6 +81,7 @@ const Footer = () => {
                                     className="max-h-9 w-auto"
                                 />
                                 </div>
+                                
                             ))}
                         </div>
                     </div>
