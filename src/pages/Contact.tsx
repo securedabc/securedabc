@@ -25,9 +25,10 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically handle the form submission to your backend
-    const serviceID = "";
-    const templateID = "";
-    const publicKey = ""; // formerly user ID
+    const serviceID = import.meta.env.VITE_EMAIL_SERVICE_ID;
+    const templateID = import.meta.env.VITE_EMAIL_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAIL_PUBLIC_KEY;
+
 
     emailjs
       .send(
@@ -358,20 +359,14 @@ const Contact = () => {
                 <h2 className="text-xl font-semibold">Our Location</h2>
               </div>
               <div className="h-full">
-                <iframe
-                  title="Victoria Memorial"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61922.
-                                447077602614!2d88.40484373972133!3d22.
-                                544725235742106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
-                                1!3m3!1m2!1s0x3a02771346ae015d%3A0xb540e4bce39763!2sVictoria%20Memorial
-                                !5e0!3m2!1sen!2sin!4v1746958607714!5m2!1sen!2sin"
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24836.64727226703!2d-77.05646933548654!3d38.91069802329007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b80288c28f3d%3A0x851f8ad0ff54eae2!2sWashington%2C%20DC%2020001%2C%20USA!5e0!3m2!1sen!2sin!4v1753696612577!5m2!1sen!2sin"
                   width="600"
                   height="300"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
+                  referrerPolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
           </div>
